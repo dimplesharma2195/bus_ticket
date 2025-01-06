@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bus Ticket Booking App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bus Ticket Booking</h1>
+        <div class="form-container">
+            <form id="filter-form">
+                <label for="filter-category">Filter:</label>
+                <select id="filter-category">
+                    <option value="All">All</option>
+                    <option value="Bus 1">Bus 1</option>
+                    <option value="Bus 2">Bus 2</option>
+                    <option value="Bus 3">Bus 3</option>
+                    <option value="Bus 4">Bus 4</option>
+                </select>
+            </form>
+            <form id="booking-form">
+                <input type="text" id="name" placeholder="Name" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="tel" id="phone" placeholder="Phone No" pattern="[0-9]{10}" title="Phone number must be 10 digits" required />
+                <input type="date" id="date" required />
+                <select id="bus-number" required>
+                    <option value="" disabled selected>Select Bus</option>
+                    <option value="Bus 1">Bus 1</option>
+                    <option value="Bus 2">Bus 2</option>
+                    <option value="Bus 3">Bus 3</option>
+                    <option value="Bus 4">Bus 4</option>
+                </select>
+                <button type="submit">Book</button>
+            </form>
+        </div>
+        <div class="booking-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date</th>
+                        <th>Bus</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="booking-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
